@@ -1,8 +1,13 @@
 import './styles/global.css';
+
 export function App() {
 	return (
-		<div>
-			<h1>Bom dia, hoje é um belo dia para dormir</h1>
-		</div>
+		<>
+			<h1 className="font-bold text-2xl text-violet-500">Hello World</h1>
+
+			<button className="bg-cyan-500 font-medium px-4 py-2 text-white hoveer:bg-cyan-300">
+				enviar
+			</button>
+		</>
 	);
 }
