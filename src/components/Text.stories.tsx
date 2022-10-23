@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-
 import { Text, TextProps } from './Text';
 
 export default {
@@ -8,6 +7,16 @@ export default {
 
 	args: {
 		children: 'Busquem conhecimento',
+		size: 'md',
+	},
+
+	argTypes: {
+		size: {
+			options: ['sm', 'md', 'lg'],
+			control: {
+				type: 'inline-radio',
+			},
+		},
 	},
 } as Meta<TextProps>;
 
@@ -28,6 +37,18 @@ export const Large: StoryObj<TextProps> = {
 export const CustomComponent: StoryObj<TextProps> = {
 	args: {
 		asChild: true,
-		children: <p>Testando</p>,
+		children: <p>component Text as a p </p>,
+	},
+	argTypes: {
+		children: {
+			table: {
+				disable: true,
+			},
+		},
+		asChild: {
+			table: {
+				disable: true,
+			},
+		},
 	},
 };
