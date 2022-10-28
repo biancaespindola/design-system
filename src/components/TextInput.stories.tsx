@@ -10,7 +10,12 @@ export default {
 	component: TextInput.Root,
 
 	args: {
-		children: <TextInput.Input placeholder="Type you email address" />,
+		children: (
+			<>
+				<TextInput.Icon></TextInput.Icon>
+				<TextInput.Input placeholder="Type you email address" />
+			</>
+		),
 	},
 
 	argTypes: {
